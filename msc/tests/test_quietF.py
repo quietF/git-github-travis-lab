@@ -13,3 +13,9 @@ def test_rot13_str_hello():
 
 def test_rot13_char_A():
 	assert_equal('N', rot13_char('A'))
+
+def test_rot13_char_hello():
+	try:
+		assert_equal('uryyb', rot13_char('hello'))
+	except TypeError:
+		print('rot13_char receives characters, not strings.')
